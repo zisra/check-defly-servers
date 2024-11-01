@@ -1,0 +1,16 @@
+{
+	"name": "check-defly-servers",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"start": "node ./src/index.js"
+	},
+	"keywords": [],
+	"author": "Isra",
+	"license": "ISC",
+	"dependencies": {
+		"node-cron": "^3.0.3"
+	}
+}
