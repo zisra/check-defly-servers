@@ -23,6 +23,7 @@ async function runRequest(requestType) {
 }
 
 function getPlayerCount(game) {
+	console.log(game);
 	return game.reduce((total, team) => total + (team.players?.length ?? 0), 0);
 }
 
