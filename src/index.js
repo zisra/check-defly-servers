@@ -31,9 +31,10 @@ function appendToCSVfile(location, contents) {
 }
 
 async function checkServers() {
+  let teams, defuse;
   try {
-    const teams = getPlayerCount(await runRequest(REQUESTS.teams));
-    const defuse = getPlayerCount(await runRequest(REQUESTS.defuse));
+    teams = getPlayerCount(await runRequest(REQUESTS.teams));
+    defuse = getPlayerCount(await runRequest(REQUESTS.defuse));
 
     const time = new Date().toISOString();
 
