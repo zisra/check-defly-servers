@@ -5,7 +5,9 @@
 	"main": "index.js",
 	"type": "module",
 	"scripts": {
-		"start": "node ./src/index.js"
+		"start": "node ./src/index.js",
+		"graph:teams": "python3 ./scripts/data.py --mode teams",
+		"graph:defuse": "python3 ./scripts/data.py --mode defuse"
 	},
 	"keywords": [],
 	"author": "Isra",
