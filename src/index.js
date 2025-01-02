@@ -10,11 +10,6 @@ const REQUESTS = {
 	defuse: `${CLOUDFLARE_WORKERS_URL}?region=use&port=3002`,
 };
 
-const CSV_FILES = {
-	teams: './data/teams.csv',
-	defuse: './data/defuse.csv',
-};
-
 async function runRequest(requestType) {
 	const response = await fetch(requestType);
 	const data = await response.json();
@@ -26,8 +21,12 @@ function getPlayerCount(game) {
 	return game.reduce((total, team) => total + (team.players?.length ?? 0), 0);
 }
 
+const CSV_FILES = {
+	teams: '/app/data/teams.csv',
+	defuse: '/app/data/defuse.csv',
+};
+
 function appendToCSVfile(location, contents) {
-	
 	if (!fs.existsSync(location)) {
 		fs.writeFileSync(location, 'time,players');
 	}
