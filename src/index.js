@@ -11,8 +11,8 @@ const REQUESTS = {
 };
 
 const CSV_FILES = {
-	teams: './app/data/teams.csv',
-	defuse: './app/data/defuse.csv',
+	teams: './data/teams.csv',
+	defuse: './data/defuse.csv',
 };
 
 async function runRequest(requestType) {
