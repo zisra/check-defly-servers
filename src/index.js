@@ -77,7 +77,6 @@ server.on('request', (request, response) => {
 		case '/defuse':
 			response.writeHead(200, {
 				'Content-Type': 'text/csv',
-				'Content-Disposition': 'inline',
 			});
 			fs.createReadStream(CSV_FILES.defuse).pipe(response);
 			break;
